@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tileset.png" type="Texture" id=2]
 [ext_resource path="res://src/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/background.png" type="Texture" id=4]
+[ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -61,5 +62,9 @@ limit_right = 1120
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 842, 264 )
+
+[node name="Coin" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 296, 192 )
 
 [editable path="Player"]
